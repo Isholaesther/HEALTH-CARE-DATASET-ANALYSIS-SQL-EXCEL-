@@ -55,7 +55,7 @@ ORDER BY Count_Patients DESC;
 ```
 
 ### Result: The most common blood types — AB- (1,275), AB+ (1,258), B- (1,252), O+ (1,248). Distribution across types is fairly even.
-Chart reference:![Most Common Blood Type](Most-Common-Blood-Type)
+Chart reference:![Most Common Blood Type]([Most-Common-Blood-Type](https://github.com/Isholaesther/HEALTH-CARE-DATASET-ANALYSIS-SQL-EXCEL-/blob/main/Most-Common-Blood-Type.png))
 
 ### Q3. How many patients fall into different age groups (0–18, 19–35, 36–60, 61+)?
 
