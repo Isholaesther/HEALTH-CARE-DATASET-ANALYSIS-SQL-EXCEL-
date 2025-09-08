@@ -40,7 +40,7 @@ GROUP BY Gender;
 ```
 
 ### Result: Both Male and Female patients have the same average age: 51 years.
-Chart reference: 
+Chart reference: ![Average age by Gender](Average-age-by-Gender)
 
 ### Q2. Which blood type is most common among patients?
 
@@ -55,7 +55,7 @@ ORDER BY Count_Patients DESC;
 ```
 
 ### Result: The most common blood types — AB- (1,275), AB+ (1,258), B- (1,252), O+ (1,248). Distribution across types is fairly even.
-Chart reference:
+Chart reference:![Most Common Blood Type](Most-Common-Blood-Type)
 
 ### Q3. How many patients fall into different age groups (0–18, 19–35, 36–60, 61+)?
 
@@ -81,7 +81,7 @@ GROUP BY
 ```
 
 ### Result: 61+ is the largest group, followed by 36–60, then 19–35, with 0–18 the smallest.
-Chart reference:
+Chart reference: ![Patients by Age Group](Patients-by-Age-Group)
 
 ### Q4. What is the distribution of patients by admission type (Emergency, Elective, Urgent)?
 
@@ -95,7 +95,7 @@ GROUP BY Admission_Type;
 ```
 
 ### Result: Urgent: 3,391, Emergency: 3,367, Elective: 3,242. Urgent and Emergency dominate admissions.
-Chart reference:
+Chart reference: ![Distribution by Admission Type](Distribution-by-Admission-Type)
 
 ### Q5. Which hospital has admitted the highest number of patients?
 
@@ -110,7 +110,7 @@ ORDER BY Patient_Count DESC;
 ```
 
 ### Result: Smith PLC admitted the highest number of patients (19 admissions). Next highest: Smith and Sons (17), Smith Inc (14), Smith Ltd (14), Johnson PLC (13).
-Chart reference:
+Chart reference: ![Hospital With Highest Admission](Hospital-With-Highest-Admission)
 
 Q6. What is the average length of stay (Discharge – Admission) by hospital?
 
