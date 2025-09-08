@@ -40,7 +40,7 @@ GROUP BY Gender;
 ```
 
 ### Result: Both Male and Female patients have the same average age: 51 years.
-Chart reference: ![Average age by Gender](Average-age-by-Gender)
+Chart reference: ![Average age by Gender](Average age by Gender)
 
 ### Q2. Which blood type is most common among patients?
 
