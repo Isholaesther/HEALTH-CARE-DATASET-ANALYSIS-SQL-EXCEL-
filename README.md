@@ -58,7 +58,7 @@ ORDER BY Count_Patients DESC;
 
 ### Result: 
 Blood types are relatively evenly distributed across the patient population, with AB-, AB+, B-, and O+ appearing slightly more frequently. The absence of a dominant blood type suggests no strong skew that would impact resource planning based on blood group demand.
-Chart reference:![Most Common Blood Type]([Most-Common-Blood-Type](https://github.com/Isholaesther/HEALTH-CARE-DATASET-ANALYSIS-SQL-EXCEL-/blob/main/Most-Common-Blood-Type.png))
+Chart reference:![Most Common Blood Type](most_common_blood_type.png)
 
 ### Q3. How many patients fall into different age groups (0–18, 19–35, 36–60, 61+)?
 
@@ -85,7 +85,7 @@ GROUP BY
 
 ### Result: 
 Patients aged 61+ represent the largest segment, followed by those aged 36–60, indicating a higher concentration of older individuals within the dataset. This may imply increased healthcare utilization among aging populations, which is consistent with typical healthcare demand patterns.
-Chart reference: ![Patients by Age Group](Patients-by-Age-Group)
+Chart reference: ![Patients by Age Group](patients_by_age_group.png)
 
 ### Q4. What is the distribution of patients by admission type (Emergency, Elective, Urgent)?
 
@@ -100,7 +100,7 @@ GROUP BY Admission_Type;
 
 ### Result: 
 Urgent and emergency admissions slightly exceed elective cases, indicating a higher proportion of unplanned or critical care needs. This suggests that healthcare facilities may need to prioritize readiness for acute cases over scheduled procedures.
-Chart reference: ![Distribution by Admission Type](Distribution-by-Admission-Type)
+Chart reference: ![Distribution by Admission Type](distribution_by_admission_type.png)
 
 ### Q5. Which hospital has admitted the highest number of patients?
 
@@ -116,7 +116,7 @@ ORDER BY Patient_Count DESC;
 
 ### Result: 
 Patient admissions are relatively low and evenly distributed across hospitals, with the highest recorded count being 19. This suggests either a limited dataset or a highly fragmented hospital representation, which may constrain meaningful comparison at the facility level.
-Chart reference: ![Hospital With Highest Admission](Hospital-With-Highest-Admission)
+Chart reference: ![Hospital With Highest Admission](hospital_with_highest_admission.png)
 
 Q6. What is the average length of stay (Discharge – Admission) by hospital?
 
@@ -143,6 +143,11 @@ ORDER BY Avg_Length_Stay ASC;
 ### Result:
 
 There is significant variability in average length of stay across hospitals, ranging from 1 to 30 days. Facilities with longer stays may be handling more complex cases or experiencing discharge inefficiencies, while shorter stays could indicate either operational efficiency or less severe case types.
+
+Chart reference
+![Top 3 Hospitals by Average Length of Stay](top_3_hospitals_by_average_stay_length.png)
+![Bottom 3 Hospitals by Average Length of Stay.png](bottom_3_hospitals_by_average_stay_length.png)
+
 
 ### Q7. Which medications are prescribed most frequently for each medical condition?
 
@@ -173,7 +178,7 @@ Arthritis → Penicillin (366)
 
 Certain medications are more frequently associated with specific conditions, indicating consistent treatment patterns. However, the recurrence of general medications (e.g., pain relievers) across multiple conditions may suggest standardized symptom management rather than highly specialized treatment approaches.
 
-Chart reference:
+Chart reference:![Most Prescribed Medication per Condition](most_prescribed_medication_per_condition.png)
 
 ### Q8. Which doctors have treated the most patients for each condition?
 
@@ -202,7 +207,7 @@ Cancer → Zachary Smith
 Asthma → Michael Smith
 
 Arthritis → Patricia Moore
-Chart reference:
+Chart reference: ![Doctors Who Treated Most Patients](doctors_who_treated_most_patients.png) 
 
 ### Q9. Which insurance provider covers the highest total billing amount?
 
