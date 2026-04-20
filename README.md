@@ -39,7 +39,8 @@ FROM Healthcare_Dataset
 GROUP BY Gender;
 ```
 
-### Result: The average age is consistent across both male and female patients at approximately 51 years, suggesting a balanced age distribution between genders. This indicates that age-related healthcare demand in this dataset does not significantly differ by gender.
+### Result: 
+The average age is consistent across both male and female patients at approximately 51 years, suggesting a balanced age distribution between genders. This indicates that age-related healthcare demand in this dataset does not significantly differ by gender.
 Chart reference: ![Average age by Gender](Average age by Gender)
 
 ### Q2. Which blood type is most common among patients?
@@ -54,7 +55,8 @@ GROUP BY Blood_Type
 ORDER BY Count_Patients DESC;
 ```
 
-### Result: Blood types are relatively evenly distributed across the patient population, with AB-, AB+, B-, and O+ appearing slightly more frequently. The absence of a dominant blood type suggests no strong skew that would impact resource planning based on blood group demand.
+### Result: 
+Blood types are relatively evenly distributed across the patient population, with AB-, AB+, B-, and O+ appearing slightly more frequently. The absence of a dominant blood type suggests no strong skew that would impact resource planning based on blood group demand.
 Chart reference:![Most Common Blood Type]([Most-Common-Blood-Type](https://github.com/Isholaesther/HEALTH-CARE-DATASET-ANALYSIS-SQL-EXCEL-/blob/main/Most-Common-Blood-Type.png))
 
 ### Q3. How many patients fall into different age groups (0–18, 19–35, 36–60, 61+)?
@@ -80,7 +82,8 @@ GROUP BY
   END;
 ```
 
-### Result: Patients aged 61+ represent the largest segment, followed by those aged 36–60, indicating a higher concentration of older individuals within the dataset. This may imply increased healthcare utilization among aging populations, which is consistent with typical healthcare demand patterns.
+### Result: 
+Patients aged 61+ represent the largest segment, followed by those aged 36–60, indicating a higher concentration of older individuals within the dataset. This may imply increased healthcare utilization among aging populations, which is consistent with typical healthcare demand patterns.
 Chart reference: ![Patients by Age Group](Patients-by-Age-Group)
 
 ### Q4. What is the distribution of patients by admission type (Emergency, Elective, Urgent)?
@@ -94,7 +97,8 @@ FROM Healthcare_Dataset
 GROUP BY Admission_Type;
 ```
 
-### Result: Urgent and emergency admissions slightly exceed elective cases, indicating a higher proportion of unplanned or critical care needs. This suggests that healthcare facilities may need to prioritize readiness for acute cases over scheduled procedures.
+### Result: 
+Urgent and emergency admissions slightly exceed elective cases, indicating a higher proportion of unplanned or critical care needs. This suggests that healthcare facilities may need to prioritize readiness for acute cases over scheduled procedures.
 Chart reference: ![Distribution by Admission Type](Distribution-by-Admission-Type)
 
 ### Q5. Which hospital has admitted the highest number of patients?
@@ -109,7 +113,8 @@ GROUP BY Hospital
 ORDER BY Patient_Count DESC;
 ```
 
-### Result: Patient admissions are relatively low and evenly distributed across hospitals, with the highest recorded count being 19. This suggests either a limited dataset or a highly fragmented hospital representation, which may constrain meaningful comparison at the facility level.
+### Result: 
+Patient admissions are relatively low and evenly distributed across hospitals, with the highest recorded count being 19. This suggests either a limited dataset or a highly fragmented hospital representation, which may constrain meaningful comparison at the facility level.
 Chart reference: ![Hospital With Highest Admission](Hospital-With-Highest-Admission)
 
 Q6. What is the average length of stay (Discharge – Admission) by hospital?
@@ -210,7 +215,8 @@ GROUP BY Insurance_Provider
 ORDER BY Total_Billing DESC;
 ```
 
-### Result: Cigna has the highest total billing (~$52,340,172). Next: Aetna (~$52,321,795), Blue Cross (~$52,125,859).
+### Result: 
+Cigna has the highest total billing (~$52,340,172). Next: Aetna (~$52,321,795), Blue Cross (~$52,125,859).
 Chart reference:
 
 ### Q10. What is the average billing amount per admission type?
@@ -224,7 +230,8 @@ FROM Healthcare_Dataset
 GROUP BY Admission_Type;
 ```
 
-### Result: Urgent: $25,961, Elective: $25,892, Emergency: $24,709.
+### Result: 
+Urgent: $25,961, Elective: $25,892, Emergency: $24,709. Average billing amounts are fairly consistent across admission types, with urgent admissions slightly higher. This indicates that cost variations are not strongly driven by admission category alone and may depend more on treatment complexity or duration of care.
 Chart reference:
 
 ### Q11. Which doctor has the highest average billing per patient?
