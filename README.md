@@ -229,7 +229,7 @@ ORDER BY Total_Billing DESC;
 ```
 
 ### Result: 
-Cigna has the highest total billing (~$52,340,172). Next: Aetna (~$52,321,795), Blue Cross (~$52,125,859).
+Cigna has the highest total billing $52,340,172. Next: Aetna $52,321,795, Blue Cross $52,125,859.
 
 ![Insurance Provider With Highest Billing](insurance_provider_with_highest_billing.png)  
 
@@ -260,7 +260,8 @@ GROUP BY Doctor
 ORDER BY Avg_Billing DESC;
 ```
 
-### Result: Aaron Mills has the highest average billing — approximately $50,000 per patient. This may indicate involvement in more complex or high-cost cases. However, this could also warrant further review to rule out anomalies in billing practices or data distribution.
+### Result: 
+Aaron Mills has the highest average billing — approximately $50,000 per patient. This may indicate involvement in more complex or high-cost cases. However, this could also warrant further review to rule out anomalies in billing practices or data distribution.
 
 ![Doctors With Highest Average Bill](doctors_with_highest_average_bill.png)
 
@@ -277,7 +278,8 @@ GROUP BY Doctor
 ORDER BY Emergency_Patients DESC;
 ```
 
-### Result: Jennifer Smith treated the most emergency patients (4), followed by Christopher Jones (3).
+### Result: 
+Jennifer Smith treated the most emergency patients (4), followed by Christopher Jones (3).
 
 ![Doctors With Highest Most Emergency Patients](doctors_with_most_emergency_patients.png)
 
@@ -292,7 +294,8 @@ FROM Healthcare_Dataset
 GROUP BY Test_Results;
 ```
 
-### Result: Normal: 34.6%, Abnormal: 32.8%, Inconclusive: 32.7%. Test outcomes are nearly evenly split between Normal, Abnormal, and Inconclusive results. This balanced distribution suggests no dominant diagnostic outcome trend within the dataset.
+### Result: 
+Normal: 34.6%, Abnormal: 32.8%, Inconclusive: 32.7%. Test outcomes are nearly evenly split between Normal, Abnormal, and Inconclusive results. This balanced distribution suggests no dominant diagnostic outcome trend within the dataset.
 
 ![Percentage_of Test Result](percentage_of_test_result.png)
 
@@ -309,7 +312,8 @@ GROUP BY Medical_Condition, Test_Results
 ORDER BY Medical_Condition, Result_Count DESC;
 ```
 
-### Result: Test result distributions remain relatively consistent across different medical conditions, with no strong correlation observed. This may indicate that outcomes are influenced by factors beyond the condition itself, such as treatment timing or patient-specific variables.
+### Result: 
+Test result distributions remain relatively consistent across different medical conditions, with no strong correlation observed. This may indicate that outcomes are influenced by factors beyond the condition itself, such as treatment timing or patient-specific variables.
 
 ![Relationship Between Medical Condition and Test Result](relationship_between_medical_condition_and_test_result.png)
 
@@ -325,7 +329,8 @@ GROUP BY Hospital
 ORDER BY Abnormal_Percentage DESC;
 ```
 
-### Result: Smith and Sons had the highest abnormal count (7). However, differences in abnormal test result rates across hospitals are minimal, with the highest counts remaining relatively low. This limits the ability to draw strong conclusions about hospital-level performance based on this metric alone.
+### Result: 
+Smith and Sons had the highest abnormal count (7). However, differences in abnormal test result rates across hospitals are minimal, with the highest counts remaining relatively low. This limits the ability to draw strong conclusions about hospital-level performance based on this metric alone.
 
 ![Abnormal Test Result by Hospital](abnormal_test_result_by_hospital.png)
 
