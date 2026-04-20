@@ -39,7 +39,7 @@ FROM Healthcare_Dataset
 GROUP BY Gender;
 ```
 
-### Result: Both Male and Female patients have the same average age: 51 years.
+### Result: The average age is consistent across both male and female patients at approximately 51 years, suggesting a balanced age distribution between genders. This indicates that age-related healthcare demand in this dataset does not significantly differ by gender.
 Chart reference: ![Average age by Gender](Average age by Gender)
 
 ### Q2. Which blood type is most common among patients?
@@ -54,7 +54,7 @@ GROUP BY Blood_Type
 ORDER BY Count_Patients DESC;
 ```
 
-### Result: The most common blood types — AB- (1,275), AB+ (1,258), B- (1,252), O+ (1,248). Distribution across types is fairly even.
+### Result: Blood types are relatively evenly distributed across the patient population, with AB-, AB+, B-, and O+ appearing slightly more frequently. The absence of a dominant blood type suggests no strong skew that would impact resource planning based on blood group demand.
 Chart reference:![Most Common Blood Type]([Most-Common-Blood-Type](https://github.com/Isholaesther/HEALTH-CARE-DATASET-ANALYSIS-SQL-EXCEL-/blob/main/Most-Common-Blood-Type.png))
 
 ### Q3. How many patients fall into different age groups (0–18, 19–35, 36–60, 61+)?
@@ -80,7 +80,7 @@ GROUP BY
   END;
 ```
 
-### Result: 61+ is the largest group, followed by 36–60, then 19–35, with 0–18 the smallest.
+### Result: Patients aged 61+ represent the largest segment, followed by those aged 36–60, indicating a higher concentration of older individuals within the dataset. This may imply increased healthcare utilization among aging populations, which is consistent with typical healthcare demand patterns.
 Chart reference: ![Patients by Age Group](Patients-by-Age-Group)
 
 ### Q4. What is the distribution of patients by admission type (Emergency, Elective, Urgent)?
@@ -94,7 +94,7 @@ FROM Healthcare_Dataset
 GROUP BY Admission_Type;
 ```
 
-### Result: Urgent: 3,391, Emergency: 3,367, Elective: 3,242. Urgent and Emergency dominate admissions.
+### Result: Urgent and emergency admissions slightly exceed elective cases, indicating a higher proportion of unplanned or critical care needs. This suggests that healthcare facilities may need to prioritize readiness for acute cases over scheduled procedures.
 Chart reference: ![Distribution by Admission Type](Distribution-by-Admission-Type)
 
 ### Q5. Which hospital has admitted the highest number of patients?
@@ -109,7 +109,7 @@ GROUP BY Hospital
 ORDER BY Patient_Count DESC;
 ```
 
-### Result: Smith PLC admitted the highest number of patients (19 admissions). Next highest: Smith and Sons (17), Smith Inc (14), Smith Ltd (14), Johnson PLC (13).
+### Result: Patient admissions are relatively low and evenly distributed across hospitals, with the highest recorded count being 19. This suggests either a limited dataset or a highly fragmented hospital representation, which may constrain meaningful comparison at the facility level.
 Chart reference: ![Hospital With Highest Admission](Hospital-With-Highest-Admission)
 
 Q6. What is the average length of stay (Discharge – Admission) by hospital?
@@ -136,10 +136,7 @@ ORDER BY Avg_Length_Stay ASC;
 
 ### Result:
 
-Top 3 (longest avg stay) — Carter-Riley (30 days), Young, Ashley (30 days), Parsons, Olson (30 days).
-
-Bottom 3 (shortest avg stay) — Lam, Rodriguez and Berger (1 day), Horn Group (1 day), Howard Ltd (1 day).
-Chart reference:
+There is significant variability in average length of stay across hospitals, ranging from 1 to 30 days. Facilities with longer stays may be handling more complex cases or experiencing discharge inefficiencies, while shorter stays could indicate either operational efficiency or less severe case types.
 
 ### Q7. Which medications are prescribed most frequently for each medical condition?
 
@@ -167,6 +164,9 @@ Cancer → Penicillin (364)
 Asthma → Aspirin (370)
 
 Arthritis → Penicillin (366)
+
+Certain medications are more frequently associated with specific conditions, indicating consistent treatment patterns. However, the recurrence of general medications (e.g., pain relievers) across multiple conditions may suggest standardized symptom management rather than highly specialized treatment approaches.
+
 Chart reference:
 
 ### Q8. Which doctors have treated the most patients for each condition?
@@ -239,7 +239,7 @@ GROUP BY Doctor
 ORDER BY Avg_Billing DESC;
 ```
 
-### Result: Aaron Mills has the highest average billing — approximately $50,000 per patient.
+### Result: Aaron Mills has the highest average billing — approximately $50,000 per patient. This may indicate involvement in more complex or high-cost cases. However, this could also warrant further review to rule out anomalies in billing practices or data distribution.
 Chart reference:
 
 ### Q12. Which doctor treated the most patients in emergency admissions?
@@ -268,7 +268,7 @@ FROM Healthcare_Dataset
 GROUP BY Test_Results;
 ```
 
-### Result: Normal: 34.6%, Abnormal: 32.8%, Inconclusive: 32.7%.
+### Result: Normal: 34.6%, Abnormal: 32.8%, Inconclusive: 32.7%. Test outcomes are nearly evenly split between Normal, Abnormal, and Inconclusive results. This balanced distribution suggests no dominant diagnostic outcome trend within the dataset.
 Chart reference:
 
 ### Q14. Is there a relationship between medical condition and test results?
@@ -283,7 +283,7 @@ GROUP BY Medical_Condition, Test_Results
 ORDER BY Medical_Condition, Result_Count DESC;
 ```
 
-### Result: The chart shows relatively balanced distributions of Normal / Abnormal / Inconclusive across conditions with minor differences 
+### Result: Test result distributions remain relatively consistent across different medical conditions, with no strong correlation observed. This may indicate that outcomes are influenced by factors beyond the condition itself, such as treatment timing or patient-specific variables.
 Chart reference: 
 
 ### Q15. Which hospital records the highest percentage of abnormal test results?
@@ -298,20 +298,16 @@ GROUP BY Hospital
 ORDER BY Abnormal_Percentage DESC;
 ```
 
-### Result: Smith and Sons had the highest abnormal count (7).
+### Result: Smith and Sons had the highest abnormal count (7). However, differences in abnormal test result rates across hospitals are minimal, with the highest counts remaining relatively low. This limits the ability to draw strong conclusions about hospital-level performance based on this metric alone.
 Chart reference:
 
 ## Recommendations
 
-1. Review hospitals with high average stays (top 3) for operational or clinical causes; check for delayed discharges or complex case mixes.
-
-2. Investigate hospitals with higher abnormal test counts/rates to determine whether extra diagnostic resources or case reviews are needed.
-
-3. Audit outlier billing patterns (doctors with very high average billing) for coding or cost-efficiency checks.
-
-4. Resource planning: urgent & emergency volumes suggest focusing staffing on peak times/units.
-
-5. Preventive care focus for conditions linked to higher abnormal results (target screening and follow-ups).
+1. The dataset appears to have relatively small and evenly distributed counts across key dimensions (e.g., hospitals, doctors), which may limit the statistical significance of comparisons and reduce the reliability of identifying true outliers.
+2. The absence of additional contextual variables—such as severity of illness, treatment type, or patient history—restricts deeper analysis and prevents more robust conclusions about cost drivers and clinical outcomes.
+3. Some metrics (e.g., average billing or length of stay) may be influenced by outliers, and without distribution analysis (e.g., median, variance), results should be interpreted with caution.
+4. The dataset structure suggests potential fragmentation (e.g., low counts per hospital), which may not accurately reflect real-world healthcare systems and could impact the generalizability of insights.
+5. Rounding applied for reporting purposes may slightly obscure precise differences between categories, although it improves readability.
 
 ## Limitations
 
