@@ -42,7 +42,8 @@ GROUP BY Gender;
 ### Result: 
 The average age is consistent across both male and female patients at approximately 51 years, suggesting a balanced age distribution between genders. This indicates that age-related healthcare demand in this dataset does not significantly differ by gender.
 
-Chart reference: ![Average age by Gender](average_age_by_gender.png)
+
+ ![Average age by Gender](average_age_by_gender.png)
 
 ### Q2. Which blood type is most common among patients?
 
@@ -58,7 +59,8 @@ ORDER BY Count_Patients DESC;
 
 ### Result: 
 Blood types are relatively evenly distributed across the patient population, with AB-, AB+, B-, and O+ appearing slightly more frequently. The absence of a dominant blood type suggests no strong skew that would impact resource planning based on blood group demand.
-Chart reference:![Most Common Blood Type](most_common_blood_type.png)
+
+![Most Common Blood Type](most_common_blood_type.png)
 
 ### Q3. How many patients fall into different age groups (0–18, 19–35, 36–60, 61+)?
 
@@ -85,7 +87,8 @@ GROUP BY
 
 ### Result: 
 Patients aged 61+ represent the largest segment, followed by those aged 36–60, indicating a higher concentration of older individuals within the dataset. This may imply increased healthcare utilization among aging populations, which is consistent with typical healthcare demand patterns.
-Chart reference: ![Patients by Age Group](patients_by_age_group.png)
+
+ ![Patients by Age Group](patients_by_age_group.png)
 
 ### Q4. What is the distribution of patients by admission type (Emergency, Elective, Urgent)?
 
@@ -100,7 +103,8 @@ GROUP BY Admission_Type;
 
 ### Result: 
 Urgent and emergency admissions slightly exceed elective cases, indicating a higher proportion of unplanned or critical care needs. This suggests that healthcare facilities may need to prioritize readiness for acute cases over scheduled procedures.
-Chart reference: ![Distribution by Admission Type](distribution_by_admission_type.png)
+
+ ![Distribution by Admission Type](distribution_by_admission_type.png)
 
 ### Q5. Which hospital has admitted the highest number of patients?
 
@@ -116,7 +120,8 @@ ORDER BY Patient_Count DESC;
 
 ### Result: 
 Patient admissions are relatively low and evenly distributed across hospitals, with the highest recorded count being 19. This suggests either a limited dataset or a highly fragmented hospital representation, which may constrain meaningful comparison at the facility level.
-Chart reference: ![Hospital With Highest Admission](hospital_with_highest_admission.png)
+
+ ![Hospital With Highest Admission](hospital_with_highest_admission.png)
 
 Q6. What is the average length of stay (Discharge – Admission) by hospital?
 
@@ -144,8 +149,8 @@ ORDER BY Avg_Length_Stay ASC;
 
 There is significant variability in average length of stay across hospitals, ranging from 1 to 30 days. Facilities with longer stays may be handling more complex cases or experiencing discharge inefficiencies, while shorter stays could indicate either operational efficiency or less severe case types.
 
-Chart reference
-![Top 3 Hospitals by Average Length of Stay](top_3_hospitals_by_average_stay_length.png)
+
+![Top 3 Hospitals by Average Length of Stay](top_3_hospitals_by_average_length_of_stay.png)
 ![Bottom 3 Hospitals by Average Length of Stay.png](bottom_3_hospitals_by_average_stay_length.png)
 
 
@@ -178,7 +183,8 @@ Arthritis → Penicillin (366)
 
 Certain medications are more frequently associated with specific conditions, indicating consistent treatment patterns. However, the recurrence of general medications (e.g., pain relievers) across multiple conditions may suggest standardized symptom management rather than highly specialized treatment approaches.
 
-Chart reference:![Most Prescribed Medication per Condition](most_prescribed_medication_per_condition.png)
+
+![Most Prescribed Medication per Condition](most_prescribed_medication_per_condition.png)
 
 ### Q8. Which doctors have treated the most patients for each condition?
 
@@ -207,7 +213,8 @@ Cancer → Zachary Smith
 Asthma → Michael Smith
 
 Arthritis → Patricia Moore
-Chart reference: ![Doctors Who Treated Most Patients](doctors_who_treated_most_patients.png) 
+
+ ![Doctors Who Treated Most Patients](doctors_who_treated_most_patients.png) 
 
 ### Q9. Which insurance provider covers the highest total billing amount?
 
@@ -223,7 +230,8 @@ ORDER BY Total_Billing DESC;
 
 ### Result: 
 Cigna has the highest total billing (~$52,340,172). Next: Aetna (~$52,321,795), Blue Cross (~$52,125,859).
-Chart reference:
+
+![Insurance Provider With Highest Billing](insurance_provider_with_highest_billing.png)  
 
 ### Q10. What is the average billing amount per admission type?
 
@@ -238,7 +246,7 @@ GROUP BY Admission_Type;
 
 ### Result: 
 Urgent: $25,961, Elective: $25,892, Emergency: $24,709. Average billing amounts are fairly consistent across admission types, with urgent admissions slightly higher. This indicates that cost variations are not strongly driven by admission category alone and may depend more on treatment complexity or duration of care.
-Chart reference:
+![Average Billing Amount per Admission Type](average_billing_amount_per_admission_type.png)
 
 ### Q11. Which doctor has the highest average billing per patient?
 
@@ -253,7 +261,9 @@ ORDER BY Avg_Billing DESC;
 ```
 
 ### Result: Aaron Mills has the highest average billing — approximately $50,000 per patient. This may indicate involvement in more complex or high-cost cases. However, this could also warrant further review to rule out anomalies in billing practices or data distribution.
-Chart reference:
+
+![Doctors With Highest Average Bill](doctors_with_highest_average_bill.png)
+
 
 ### Q12. Which doctor treated the most patients in emergency admissions?
 
@@ -268,7 +278,8 @@ ORDER BY Emergency_Patients DESC;
 ```
 
 ### Result: Jennifer Smith treated the most emergency patients (4), followed by Christopher Jones (3).
-Chart reference:
+
+![Doctors With Highest Most Emergency Patients](doctors_with_most_emergency_patients.png)
 
 ### Q13. What percentage of patients had “Normal”, “Abnormal”, or “Inconclusive” test results?
 
@@ -282,7 +293,9 @@ GROUP BY Test_Results;
 ```
 
 ### Result: Normal: 34.6%, Abnormal: 32.8%, Inconclusive: 32.7%. Test outcomes are nearly evenly split between Normal, Abnormal, and Inconclusive results. This balanced distribution suggests no dominant diagnostic outcome trend within the dataset.
-Chart reference:
+
+![Percentage_of Test Result](percentage_of_test_result.png)
+
 
 ### Q14. Is there a relationship between medical condition and test results?
 
@@ -297,7 +310,8 @@ ORDER BY Medical_Condition, Result_Count DESC;
 ```
 
 ### Result: Test result distributions remain relatively consistent across different medical conditions, with no strong correlation observed. This may indicate that outcomes are influenced by factors beyond the condition itself, such as treatment timing or patient-specific variables.
-Chart reference: 
+
+![Relationship Between Medical Condition and Test Result](relationship_between_medical_condition_and_test_result.png)
 
 ### Q15. Which hospital records the highest percentage of abnormal test results?
 
@@ -312,7 +326,8 @@ ORDER BY Abnormal_Percentage DESC;
 ```
 
 ### Result: Smith and Sons had the highest abnormal count (7). However, differences in abnormal test result rates across hospitals are minimal, with the highest counts remaining relatively low. This limits the ability to draw strong conclusions about hospital-level performance based on this metric alone.
-Chart reference:
+
+![Abnormal Test Result by Hospital](abnormal_test_result_by_hospital.png)
 
 ## Recommendations
 
