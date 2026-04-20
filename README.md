@@ -42,7 +42,7 @@ GROUP BY Gender;
 ### Result: 
 The average age is consistent across both male and female patients at approximately 51 years, suggesting a balanced age distribution between genders. This indicates that age-related healthcare demand in this dataset does not significantly differ by gender.
 
-Chart reference: ![Average age by Gender] (Average age by Gender.png)
+Chart reference: ![Average age by Gender](average_age_by_gender.png)
 
 ### Q2. Which blood type is most common among patients?
 
